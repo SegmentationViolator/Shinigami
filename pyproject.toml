@@ -1,0 +1,30 @@
+[project]
+name = "shinigami"
+version = "0.1.0"
+description = "A Discord bot to automate the hosting of L's game"
+authors = [ { name = "SegmentationViolator", email = "segmentationviolator@proton.me" } ]
+license = { text = "MIT" }
+readme = "README.md"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.13,<3.14"
+hikari = "^2.1.0"
+hikari-arc = "^1.4.0"
+aiosqlite = "^0.20.0"
+
+[tool.poetry.group.dev.dependencies]
+python-lsp-ruff = "^2.2.2"
+pylsp-mypy = "^0.6.9"
+rope = "^1.13.0"
+
+[tool.pylsp-mypy]
+enabled = true
+live-mode = true
+strict = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
